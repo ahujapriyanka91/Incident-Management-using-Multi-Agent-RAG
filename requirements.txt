@@ -1,0 +1,7 @@
+langgraph
+langchain-groq
+python-dotenv
+sentence-transformers
+faiss-cpu
+numpy
+streamlit
