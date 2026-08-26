@@ -33,8 +33,4 @@ Requires a `GROQ_API_KEY` in `.env` (free tier at console.groq.com). Copy `.env.
 - `python -m streamlit run dashboard.py` — interactive web UI at `localhost:8501`
 
 ## Roadmap (v2 ideas)
-
-- Swap synthetic KB for real [Loghub](https://github.com/logpai/loghub) HDFS/Spark logs
-- Add a feedback loop: engineer confirms/corrects root cause, gets written back to the KB
-- Use retrieval distance as a second, independent escalation signal (not just LLM self-reported confidence)
 - Add RAGAS-based evaluation harness to measure retrieval/diagnosis quality over time
