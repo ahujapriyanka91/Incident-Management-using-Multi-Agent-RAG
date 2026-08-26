@@ -1,0 +1,4 @@
+.env
+faiss_incident_store/
+__pycache__/
+*.pyc
