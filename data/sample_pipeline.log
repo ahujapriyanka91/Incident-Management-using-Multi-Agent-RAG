@@ -1,0 +1,26 @@
+2026-08-25 02:00:01 INFO  [scheduler] DAG daily_sales_etl triggered
+2026-08-25 02:00:03 INFO  [extract_task] Connecting to source API...
+2026-08-25 02:00:05 INFO  [extract_task] Extracted 184320 rows
+2026-08-25 02:00:12 INFO  [transform_task] Starting transform stage
+2026-08-25 02:04:47 ERROR [spark_executor_3] org.apache.spark.shuffle.FetchFailedException: Failed to connect to executor_7 at 10.4.2.19:7337
+2026-08-25 02:04:48 WARN  [spark_driver] Stage 4 failed 1 times, retrying...
+2026-08-25 02:05:10 ERROR [spark_executor_3] org.apache.spark.shuffle.FetchFailedException: Failed to connect to executor_7 at 10.4.2.19:7337
+2026-08-25 02:05:11 ERROR [spark_driver] Stage 4 failed 3 times, aborting job
+2026-08-25 02:05:12 INFO  [scheduler] Task transform_task marked as failed
+2026-08-25 02:05:12 INFO  [scheduler] Downstream tasks marked upstream_failed
+2026-08-25 02:10:00 INFO  [scheduler] DAG warehouse_sync_etl triggered
+2026-08-25 02:10:22 ERROR [load_task] sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) FATAL: too many connections for role "etl_writer"
+2026-08-25 02:10:22 ERROR [load_task] Connection attempt failed after 3 retries
+2026-08-25 02:10:23 INFO  [scheduler] Task load_task marked as failed
+2026-08-25 02:15:00 INFO  [scheduler] DAG clickstream_kafka_sync triggered
+2026-08-25 02:15:04 WARN  [kafka_consumer_2] Consumer group rebalance triggered
+2026-08-25 02:15:34 ERROR [kafka_consumer_2] Consumer group rebalance failed: Member ID required, member being removed
+2026-08-25 02:16:05 WARN  [kafka_consumer_2] Consumer group rebalance triggered
+2026-08-25 02:16:36 ERROR [kafka_consumer_2] Consumer group rebalance failed: Member ID required, member being removed
+2026-08-25 02:20:00 INFO  [scheduler] DAG daily_sales_etl retry attempt 1
+2026-08-25 02:20:15 INFO  [extract_task] Extracted 184320 rows
+2026-08-25 02:24:02 ERROR [merge_task] Duplicate key value violates unique constraint "orders_pkey" during merge
+2026-08-25 02:24:02 INFO  [scheduler] Task merge_task marked as failed
+2026-08-25 02:30:00 INFO  [scheduler] DAG feature_embedding_job triggered
+2026-08-25 02:30:41 ERROR [gpu_worker_4] CUDA error: an illegal memory access was encountered during checksum_validate_kernel<<<4096,256>>>, cudaErrorIllegalAddress (700), core dumped: 0x00007f2a1c0d3e40 0x00007f2a1c0d4110
+2026-08-25 02:30:41 ERROR [gpu_worker_4] NaN detected in tensor shard 3 immediately before crash, watchdog reported ECC uncorrectable error on device 2
